@@ -78,13 +78,14 @@ Input Layer (128x128x3)
 → Dropout
 → Dense Layer (Softmax Output - 4 Classes)
 
-![image](https://github.com/user-attachments/assets/dc7edfe5-3496-4e8f-997a-a1a75b098424)
+![image](https://github.com/user-attachments/assets/d5cd19ac-2113-40a2-8fac-db1aacce062d)
 
 
 
 
 
-Loss Function: Categorical Crossentropy
+
+Loss Function: Categorical Cross-Entropy
 
 Optimizer: Adam
 
@@ -96,7 +97,7 @@ Epochs: 20
  Segmentation Approach
 K-means Clustering (k=2): Segment MRI images into tumor vs non-tumor regions based on intensity.
 
-Morphological Operations: Erosion, dilation to refine segmentation.
+Morphological Operations: Erosion and dilation are used to refine segmentation.
 
 Final output: Overlay mask on original scan.
 
@@ -110,38 +111,32 @@ Meningioma	0.88	0.78	0.82
 Pituitary	0.95	1.00	0.95
 No Tumor	0.93	0.99	0.96
 
-![image](https://github.com/user-attachments/assets/83c7762d-6429-45f1-87ee-79979088800e)
 
 
 
-Sample Visuals
+
+Sample Visuals:
+
 Classification confusion matrix
 
 Accuracy/loss plots
 
-![image](https://github.com/user-attachments/assets/16b7904a-3504-4e74-b6fa-99921bd4caa8)
-
-
 Original MRI + segmented tumor region (K-means output)
-
-![image](https://github.com/user-attachments/assets/40bf3cc2-ead2-4a90-a9c8-69422c7b588f)
-
-
-![image](https://github.com/user-attachments/assets/c30de938-86d8-468b-a865-91f47a3a8ec7)
-
 
 
 💡 Lessons Learned
+
 Importance of preprocessing steps (resizing, normalization)
 
-K-means as a starting segmentation method, with future potential for U-Net.
+K-means is a starting segmentation method, with potential for future use in U-Net.
 
 Class imbalance impacts metrics like recall, especially in meningioma cases.
 
-Deployment of CNN model and its application.
+Deployment of the CNN model and its application.
 
 
 🚀 Future Work
+
 Integrate U-Net for enhanced pixel-level segmentation.
 
 Use 3D volumetric MRI data for better depth representation.
@@ -152,6 +147,7 @@ Add metadata-aware classification for patient-level insights.
 
 
 🤝 Acknowledgements
+
 Dataset: Sartaj Bhuvaji via Kaggle
 
 Guided by course: Emerging Trends in Data Technology(TAFE NSW)
