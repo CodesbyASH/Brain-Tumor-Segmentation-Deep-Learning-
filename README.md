@@ -65,9 +65,8 @@ Image Processing Pipeline
 
 
 
- Model Architecture (CNN)
+Model Architecture (CNN)
 
-```plaintext
 Input Layer (128x128x3)
 → Conv2D + ReLU
 → MaxPooling
@@ -77,12 +76,6 @@ Input Layer (128x128x3)
 → Dense Layer + ReLU
 → Dropout
 → Dense Layer (Softmax Output - 4 Classes)
-
-![image](https://github.com/user-attachments/assets/d5cd19ac-2113-40a2-8fac-db1aacce062d)
-
-
-
-
 
 
 Loss Function: Categorical Cross-Entropy
@@ -94,7 +87,8 @@ Activation: ReLU + Softmax
 Epochs: 20
 
 
- Segmentation Approach
+Segmentation Approach
+
 K-means Clustering (k=2): Segment MRI images into tumor vs non-tumor regions based on intensity.
 
 Morphological Operations: Erosion and dilation are used to refine segmentation.
@@ -103,6 +97,7 @@ Final output: Overlay mask on original scan.
 
 
 📊 Results
+
 Classification Metrics:
 
 Class	Precision	Recall	F1-score
@@ -115,7 +110,7 @@ No Tumor	0.93	0.99	0.96
 
 
 
-Sample Visuals:
+Sample Visuals:(The pdf codes file can be referred for the samples)
 
 Classification confusion matrix
 
